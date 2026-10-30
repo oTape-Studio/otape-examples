@@ -1,0 +1,15 @@
+{
+  "format": "oTAPE",
+  "format_version": "1.0",
+  "cassette": {
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "title": "Invalid: unknown write_protect state",
+    "type": "C90",
+    "side_length_seconds": 2700,
+    "created_at": "2026-10-28T22:00:00Z"
+  },
+  "sides": {
+    "A": { "write_protect": "removed", "audio": null },
+    "B": { "write_protect": "intact", "audio": null }
+  }
+}

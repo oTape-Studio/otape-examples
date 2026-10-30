@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simplest oTAPE Player</title>
+  <link rel="stylesheet" href="demo/styles.css">
+  <script type="module" src="demo/app.js"></script>
+</head>
+<body>
+<main>
+  <h1>Simplest oTAPE Player</h1>
+  <p>A minimal reference player for oTAPE 1.0. Open an <code>.otape</code> file to play it.</p>
+
+  <label class="drop-zone" id="drop-zone">
+    <input type="file" id="file-input" accept=".otape" hidden>
+    Drop an .otape file here, or click to choose one.
+  </label>
+  <p class="example"><button type="button" id="example-button">Load the example cassette</button></p>
+  <p class="error" id="error" role="alert" hidden></p>
+
+  <section class="deck" id="deck" aria-label="Deck" hidden>
+    <div class="deck__title" id="title"></div>
+    <div class="deck__details" id="details"></div>
+    <div class="deck__time" id="time"></div>
+    <progress class="deck__progress" id="progress" max="1" value="0"></progress>
+    <div class="deck__now-playing" id="now-playing" aria-live="polite"></div>
+    <div class="deck__status" id="status"></div>
+    <div class="deck__controls" id="controls" role="group" aria-label="Transport"></div>
+  </section>
+</main>
+</body>
+</html>

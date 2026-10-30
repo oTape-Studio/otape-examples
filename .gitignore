@@ -1,0 +1,32 @@
+# macOS
+.DS_Store
+.AppleDouble
+._*
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Coverage and build output
+coverage/
+dist/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Python (local servers and future examples)
+__pycache__/
+*.py[cod]
+.venv/
+venv/

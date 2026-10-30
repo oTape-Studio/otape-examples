@@ -1,0 +1,121 @@
+{
+  "format": "oTAPE",
+  "format_version": "1.0",
+  "cassette": {
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "serial_number": "OT-000001",
+    "title": "Night Drive",
+    "creator": "Jan Osio",
+    "description": "Songs for the A4 after midnight.",
+    "genre": "Synthwave",
+    "notes": "Recorded in one take, no pause button.",
+    "type": "C60",
+    "side_length_seconds": 1800,
+    "timeline_rate": 44100,
+    "created_at": "2026-10-28T22:00:00Z",
+    "modified_at": "2026-10-28T23:10:00Z",
+    "created_with": "oTape Studio 1.0",
+    "modified_with": "oTape Studio 1.0",
+    "generation": 0,
+    "location": "Warsaw",
+    "date_recorded": "2026-10-28",
+    "rights": {
+      "copyright": "© 2026 Jan Osio",
+      "license": "CC-BY-NC-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "file": "docs/license.txt"
+    }
+  },
+  "sides": {
+    "A": {
+      "title": "Outbound",
+      "write_protect": "broken",
+      "audio": {
+        "file": "audio/side-a.m4a",
+        "codec": "aac-lc",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 256000,
+        "recorded_frames": 76037220,
+        "duration_seconds": 1724.2
+      },
+      "markers": [
+        { "frame": 0, "title": "Intro", "kind": "voice" },
+        { "frame": 5530140, "title": "Midnight City", "kind": "track" },
+        { "frame": 17163720, "title": "Road note", "kind": "note" }
+      ]
+    },
+    "B": {
+      "title": "Inbound",
+      "write_protect": "taped_over",
+      "audio": {
+        "file": "audio/side-b.m4a",
+        "codec": "aac-lc",
+        "sample_rate": 44100,
+        "channels": 2,
+        "bit_rate": 256000,
+        "recorded_frames": 35967960,
+        "duration_seconds": 815.6
+      },
+      "markers": []
+    }
+  },
+  "appearance": {
+    "preset": "smoke",
+    "shell": { "color": "#3A3F478C", "finish": "transparent" },
+    "label": {
+      "style": "stripes",
+      "paper": "#FAFAF5",
+      "ink": "#202020",
+      "accent": "#E4572E",
+      "font": "pen"
+    }
+  },
+  "jcard": {
+    "card_color": "#1C1033",
+    "ink": "#FFE8A3",
+    "font": "stencil",
+    "front": { "title": "Night Drive", "subtitle": "a mixtape for the A4" },
+    "spine": { "text": "NIGHT DRIVE · 2026" },
+    "flap": { "text": "Dolby B · Type II · Jan Osio" },
+    "tracklist": {
+      "A": ["Intro", "Midnight City", "Road note"],
+      "B": ["Sunrise"]
+    },
+    "dedication": "For everyone still awake."
+  },
+  "artwork": {
+    "cassette_face_a": "artwork/cassette-face-a.png",
+    "cassette_face_b": "artwork/cassette-face-b.png",
+    "label_a": "artwork/label-a.png",
+    "label_b": "artwork/label-b.png",
+    "jcard_front": "artwork/jcard-front.jpg",
+    "jcard_spine": "artwork/jcard-spine.png",
+    "jcard_flap": "artwork/jcard-flap.png",
+    "thumbnail": "artwork/thumbnail.png"
+  },
+  "booklet": {
+    "panels": [
+      "artwork/booklet-01.png",
+      "artwork/booklet-02.png",
+      "artwork/booklet-03.png",
+      "artwork/booklet-04.png"
+    ],
+    "html": "docs/booklet.html",
+    "notes": "docs/notes.md"
+  },
+  "history": [
+    { "type": "created", "timestamp": "2026-10-28T22:00:00Z", "app": "oTape Studio 1.0" },
+    { "type": "recorded", "timestamp": "2026-10-28T22:35:00Z", "app": "oTape Studio 1.0",
+      "side": "A", "start_frame": 0, "end_frame": 76037220, "source": "file", "source_format": "mp3" },
+    { "type": "write_protect_changed", "timestamp": "2026-10-28T22:40:00Z", "app": "oTape Studio 1.0",
+      "side": "A", "state": "broken" },
+    { "type": "write_protect_changed", "timestamp": "2026-10-28T22:44:00Z", "app": "oTape Studio 1.0",
+      "side": "B", "state": "broken" },
+    { "type": "write_protect_changed", "timestamp": "2026-10-28T22:45:00Z", "app": "oTape Studio 1.0",
+      "side": "B", "state": "taped_over" }
+  ],
+  "extensions": {
+    "org.example.player": { "shelf_position": 12 }
+  }
+}

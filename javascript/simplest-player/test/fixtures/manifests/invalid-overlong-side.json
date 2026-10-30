@@ -1,0 +1,19 @@
+{
+  "format": "oTAPE",
+  "format_version": "1.0",
+  "cassette": {
+    "id": "550e8400-e29b-41d4-a716-446655440000",
+    "title": "Invalid: 31 minutes recorded on a 30-minute side",
+    "type": "C60",
+    "side_length_seconds": 1800,
+    "created_at": "2026-10-28T22:00:00Z"
+  },
+  "sides": {
+    "A": {
+      "write_protect": "intact",
+      "audio": { "file": "audio/side-a.m4a", "codec": "aac-lc", "sample_rate": 44100, "channels": 2,
+                 "recorded_frames": 82026000, "duration_seconds": 1860.0 }
+    },
+    "B": { "write_protect": "intact", "audio": null }
+  }
+}

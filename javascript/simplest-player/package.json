@@ -1,0 +1,16 @@
+{
+  "name": "otape-simplest-player",
+  "version": "1.0.0",
+  "description": "The simplest oTAPE 1.0 player for the browser: a reference for developers.",
+  "private": true,
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT"
+}
