@@ -1,0 +1,130 @@
+:root {
+  color-scheme: light dark;
+  --page-background: #f4f2ec;
+  --page-text: #1d1d1f;
+  --page-muted: #6e6e73;
+  --page-panel: #ffffff;
+  --page-line: #e2dfd6;
+  --page-accent: #c8102e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-background: #0f0f11;
+    --page-text: #f2f1ec;
+    --page-muted: #9b9a94;
+    --page-panel: #18181b;
+    --page-line: #2a2a2e;
+    --page-accent: #ff6b4a;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font:
+    15px/1.55 'Inter',
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: var(--page-text);
+  background: var(--page-background);
+}
+
+a {
+  color: var(--page-accent);
+}
+
+.page {
+  display: grid;
+  /* minmax(0, …) lets long code lines scroll instead of widening the page. */
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 40px 16px 64px;
+}
+
+.intro h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+}
+
+.intro p {
+  margin: 0;
+  color: var(--page-muted);
+}
+
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.examples button {
+  padding: 6px 14px;
+  font: inherit;
+  color: inherit;
+  background: var(--page-panel);
+  border: 1px solid var(--page-line);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.examples button[aria-pressed='true'] {
+  color: var(--page-accent);
+  border-color: var(--page-accent);
+}
+
+.panel {
+  padding: 16px 18px;
+  background: var(--page-panel);
+  border: 1px solid var(--page-line);
+  border-radius: 14px;
+}
+
+.panel h2 {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--page-muted);
+}
+
+pre {
+  margin: 0;
+  overflow-x: auto;
+  font-size: 13px;
+}
+
+.hint {
+  margin: 12px 0 0;
+  font-size: 13px;
+  color: var(--page-muted);
+}
+
+kbd {
+  padding: 1px 5px;
+  font:
+    12px ui-monospace,
+    Menlo,
+    monospace;
+  border: 1px solid var(--page-line);
+  border-radius: 4px;
+}
+
+.log {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 13px;
+  color: var(--page-muted);
+}
+
+.log code {
+  color: var(--page-text);
+}

@@ -9,9 +9,16 @@ write a basic player in an afternoon". These examples show how.
 
 ## Examples
 
-| Example | Language | What it shows |
-| --- | --- | --- |
-| [`javascript/simplest-player`](javascript/simplest-player) | JavaScript (browser) | A minimal oTAPE 1.0 player: reading the container, validating the manifest, playing, winding and flipping a tape. No dependencies, no build step. |
+| Example | Language | Level | What it shows |
+| --- | --- | --- | --- |
+| [`javascript/simplest-player`](javascript/simplest-player) | JavaScript (browser) | Minimal | Reading the container, validating the manifest, playing, winding and flipping a tape. No dependencies, no build step. |
+| [`typescript/web-player`](typescript/web-player) | TypeScript (browser) | Complete | An embeddable `<otape-player>` element: streaming playback, the cassette drawn from its manifest with animated reels, artwork, J-card, rights, theming and translation. Vite, Vitest, ESLint. |
+
+Examples come in two levels:
+
+- **Minimal** examples are for reading. They do the least needed to be correct, in as little code as possible.
+- **Complete** examples are for using. They cover what a real application needs and are ready to deploy, with the
+  tooling a professional project in that language would have.
 
 Each example has its own README with instructions to run and test it.
 
@@ -19,12 +26,12 @@ Each example has its own README with instructions to run and test it.
 
 Every example in this repository:
 
-- **implements the specification, not an application.** It does the least needed to be correct, and says
-  what it leaves out;
+- **is honest about its scope.** It says which parts of the specification it implements and what it leaves out;
 - **cites the specification.** Rules in the code carry their section number (`§7.3`), so you can check them
   against [oTAPE-1.0.md](https://github.com/otape-studio/otape-spec/blob/main/oTAPE-1.0.md);
 - **is self-contained.** One folder, its own README and tests, no shared code between examples;
-- **runs without installing anything** beyond the language's standard toolchain;
+- **keeps dependencies in proportion.** Minimal examples have none; complete ones use only the standard tooling
+  of their ecosystem, and only for development;
 - **is tested** against the example files of the specification, including the invalid ones a conforming
   reader must reject.
 

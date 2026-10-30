@@ -1,0 +1,29 @@
+{
+  "format": "oTAPE",
+  "format_version": "1.0",
+  "cassette": {
+    "id": "a7c3a1f2-1c1e-4b6d-9a3e-2b5f6d7e8f90",
+    "title": "Field recordings",
+    "creator": "Jan Osio",
+    "type": "custom",
+    "side_length_seconds": 600,
+    "timeline_rate": 48000,
+    "created_at": "2026-10-29T08:00:00Z"
+  },
+  "sides": {
+    "A": {
+      "title": "Forest",
+      "write_protect": "intact",
+      "audio": {
+        "file": "audio/side-a.flac",
+        "codec": "flac",
+        "sample_rate": 48000,
+        "channels": 2,
+        "recorded_frames": 14400000,
+        "duration_seconds": 300.0
+      },
+      "markers": [{ "frame": 2880000, "title": "Woodpecker", "kind": "note" }]
+    },
+    "B": { "write_protect": "intact", "audio": null }
+  }
+}

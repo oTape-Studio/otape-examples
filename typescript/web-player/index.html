@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>oTAPE Web Player</title>
+    <meta
+      name="description"
+      content="An embeddable oTAPE 1.0 player: streaming playback, procedural cassette drawing and a custom element."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@800&family=Caveat:wght@700&family=Inter:wght@400;600;700;800&family=Libre+Baskerville&family=Permanent+Marker&family=Special+Elite&display=swap"
+    />
+    <link rel="stylesheet" href="/demo/demo.css" />
+    <script type="module" src="/demo/main.ts"></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="intro">
+        <h1>oTAPE Web Player</h1>
+        <p>
+          An embeddable player for
+          <a href="https://github.com/otape-studio/otape-spec">oTAPE 1.0</a> cassettes. Drop an
+          <code>.otape</code> file on the player, or pick an example.
+        </p>
+      </header>
+
+      <nav class="examples" aria-label="Example cassettes">
+        <button type="button" data-src="examples/demo-tape.otape" aria-pressed="true">Demo Tape</button>
+        <button type="button" data-src="examples/sample-tones.otape">Test Tones</button>
+        <button type="button" data-src="examples/blank-c60.otape">Blank C60</button>
+      </nav>
+
+      <otape-player id="player" src="examples/demo-tape.otape" droppable></otape-player>
+
+      <section class="panel">
+        <h2>Embed it</h2>
+        <pre><code>&lt;script type="module" src="otape-player/register.js"&gt;&lt;/script&gt;
+&lt;otape-player src="night-drive.otape" droppable&gt;&lt;/otape-player&gt;</code></pre>
+        <p class="hint">
+          Keyboard: <kbd>K</kbd> play/stop · <kbd>J</kbd> rewind · <kbd>L</kbd> fast forward ·
+          <kbd>F</kbd> flip
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>Events</h2>
+        <ol class="log" id="log" aria-live="polite"></ol>
+      </section>
+    </main>
+  </body>
+</html>

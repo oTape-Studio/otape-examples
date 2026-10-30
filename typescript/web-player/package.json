@@ -1,0 +1,56 @@
+{
+  "name": "otape-web-player",
+  "version": "1.0.0",
+  "description": "An embeddable oTAPE 1.0 web player: streaming playback, procedural cassette drawing and a <otape-player> custom element.",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/lib/types/index.d.ts",
+      "import": "./dist/lib/otape-player.js"
+    },
+    "./register": {
+      "types": "./dist/lib/types/register.d.ts",
+      "import": "./dist/lib/register.js"
+    }
+  },
+  "files": [
+    "dist/lib"
+  ],
+  "sideEffects": [
+    "./dist/lib/register.js",
+    "./src/register.ts"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run typecheck && vite build && vite build --mode lib && tsc -p tsconfig.lib.json",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
+    "check": "npm run typecheck && npm run lint && npm run format:check && npm run test",
+    "make:demo": "node scripts/make-demo-cassette.ts"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^24.19.2",
+    "@vitest/coverage-v8": "^5.0.5",
+    "eslint": "^10.13.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.13.0",
+    "happy-dom": "^21.0.4",
+    "prettier": "^3.9.10",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.72.1",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  }
+}

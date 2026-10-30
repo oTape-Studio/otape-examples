@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  simplest-player:
+    name: javascript/simplest-player
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: javascript/simplest-player
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm test
+
+  web-player:
+    name: typescript/web-player
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: typescript/web-player
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: typescript/web-player/package-lock.json
+      - run: npm ci
+      - run: npm run check
+      - run: npm run build
